@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node-xlsx</title>
+	<style type="text/css">
+	*{
+		padding: 0; margin: 0;
+	}
+	p{
+		line-height: 40px; font-size: 16px;
+	}
+	em{
+		color: red;
+	}
+	.container{
+		text-align: center; margin-top: 50px;
+	}
+	.btn{
+		border: none; background: none; background: #047fbe;color: #fff; font-size: 16px;padding: 8px 15px; border-radius: 3px; margin-top: 20px;
+	}
+	.btn:hover{
+		background: #006aa1;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<p>点击“下载”按钮下载excel表格，可生成 <em>.xlsx</em> 格式的excel表格</p>
+		<input type="button" value="下载" id="btn" class="btn" />
+	</div>
+
+	<script type="text/javascript">
+	var oBtn = document.getElementById('btn');
+
+	oBtn.onclick = function (){
+		window.location = 'http://localhost:3000/download?fileName=myexcel';
+	}
+	</script>
+</body>
+</html>
